@@ -43,19 +43,15 @@ class _SearchState extends State<Search> {
                         children: [
                           Icon(Icons.search, color: Colors.white, size: 30,),
                           const SizedBox(width: 15),
-                          TextField(
-                            decoration:InputDecoration(
-                              hintText: 'Artists, songs or podcasts',
-                              hintStyle: TextStyle(color: Colors.white)
+                          Text(
+                            'Artists, songs or podcasts',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w600,
+                              height: 0,
                             ),
-                            // 'Artists, songs or podcasts',
-                            // style: TextStyle(
-                            //   color: Colors.white,
-                            //   fontSize: 15,
-                            //   fontFamily: 'Inter',
-                            //   fontWeight: FontWeight.w600,
-                            //   height: 0,
-                            //),
                           ),
                         ],
                       ),
