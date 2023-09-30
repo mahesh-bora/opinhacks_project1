@@ -11,12 +11,14 @@ class _LibraryPageState extends State<LibraryPage> {
   // Sample list of friends
   final List<String> friendsList = [
     "Mohit Singh Sahare ",
-    "Mahesh Bora",
     "Ayush Talpelwar",
-    "Friend 4",
-    "Friend 5",
-    "Friend 6",
-    "Friend 7",
+    "Yash Patni",
+    "Bhakti Bagadia",
+    "Tanisha Sen",
+    "Pavan Pawar",
+    "Aryan Khokle",
+    "Ankit Bhad",
+    "Jaya SIngh",
     // Add more friends as needed
   ];
 
@@ -27,7 +29,8 @@ class _LibraryPageState extends State<LibraryPage> {
         body: Container(
           margin: EdgeInsets.fromLTRB(15, 15, 10, 10),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, // Align text and line to the left
+            crossAxisAlignment:
+                CrossAxisAlignment.start, // Align text and line to the left
             children: [
               Text(
                 'Your Friends',
@@ -45,7 +48,8 @@ class _LibraryPageState extends State<LibraryPage> {
               Container(
                 width: 175,
                 height: 3,
-                margin: EdgeInsets.only(left: 0), // Move the green line to the left
+                margin:
+                    EdgeInsets.only(left: 0), // Move the green line to the left
                 decoration: ShapeDecoration(
                   color: Color(0xFF4CD964),
                   shape: RoundedRectangleBorder(
@@ -57,7 +61,8 @@ class _LibraryPageState extends State<LibraryPage> {
                 height: 15,
               ),
               Container(
-                margin: EdgeInsets.only(left: 0), // Move the search bar to the left
+                margin:
+                    EdgeInsets.only(left: 0), // Move the search bar to the left
                 padding: EdgeInsets.symmetric(horizontal: 5.0),
                 child: Row(
                   children: <Widget>[
@@ -66,20 +71,47 @@ class _LibraryPageState extends State<LibraryPage> {
                         decoration: InputDecoration(
                           hintText: 'Search Friends',
                           border: OutlineInputBorder(),
-                          prefixIcon: Icon(Icons.search), // Place the search icon inside the search bar
+                          prefixIcon: Icon(Icons
+                              .search), // Place the search icon inside the search bar
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(
+                height: 15,
+              ),
               Expanded(
-                child: ListView.builder(
-                  itemCount: friendsList.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      title: Text(friendsList[index], style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
-                      // Add more friend details or actions here
+                child: ListView.separated(
+                  itemCount: 9,
+                  separatorBuilder: (context, index) => SizedBox(
+                    height: 15,
+                  ),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin:
+                          EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0),
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 1.0,
+                        ),
+                      ),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          radius: 30,
+                          child: Icon(Icons.person),
+                        ),
+                        title: Text(
+                          friendsList[index],
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     );
                   },
                 ),

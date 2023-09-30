@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:opinhacks_project/pages/lyrics.dart';
+
 class Screen extends StatefulWidget {
   const Screen({Key? key}) : super(key: key);
 
@@ -8,6 +10,8 @@ class Screen extends StatefulWidget {
 }
 
 class _ScreenState extends State<Screen> {
+  var icon_1;
+  var checked = false;
   double _currentSliderValue = 20;
   @override
   Widget build(BuildContext context) {
@@ -59,12 +63,23 @@ class _ScreenState extends State<Screen> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              margin: EdgeInsets.only(left: 20),
-              width: 350,
-              child: Image.asset(
-                'assets/Image.png',
-                scale: 0.3,
+            InkWell(
+              onTap: () {
+                // Navigate to the desired page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          Lyrics()), // Replace with the page you want to navigate to
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 20),
+                width: 350,
+                child: Image.asset(
+                  'assets/playlist_cover.png',
+                  scale: 0.3,
+                ),
               ),
             ),
             SizedBox(
@@ -91,7 +106,7 @@ class _ScreenState extends State<Screen> {
                       ),
                     ],
                   ),
-                  Icon(Icons.favorite, color: Colors.white),
+                  Icon(Icons.favorite_border, color: Colors.white),
                 ],
               ),
             ),
@@ -143,11 +158,25 @@ class _ScreenState extends State<Screen> {
             ),
             Container(
               margin: EdgeInsets.only(left: 20),
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'LYRICS',
-                  style: GoogleFonts.karla(fontSize: 20,fontWeight: FontWeight.bold, color: Colors.white),
+              child: InkWell(
+                onTap: () {
+                  // Navigate to the desired page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            Lyrics()), // Replace with the page you want to navigate to
+                  );
+                },
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'LYRICS',
+                    style: GoogleFonts.poppins(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),

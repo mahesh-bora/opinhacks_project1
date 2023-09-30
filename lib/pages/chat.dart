@@ -43,10 +43,88 @@ class _ChatScreenState extends State<ChatScreen> {
               ],
             ),
           ),
+          Container(
+            width: 288,
+            height: 165,
+            padding: const EdgeInsets.all(10),
+            decoration: ShapeDecoration(
+              color: Color(0xFFFFD9EB),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Paper Rings\n',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                          letterSpacing: -0.17,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'Taylor swift',
+                        style: TextStyle(
+                          color: Color(0xFF818181),
+                          fontSize: 16,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w500,
+                          height: 0,
+                          letterSpacing: -0.17,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFFA0CD),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        width: 248,
+                        child: Text(
+                          'I like shiny things,\nbut I’d marry you with paper rings',
+                          style: TextStyle(
+                            color: Color(0xFF7C7C7C),
+                            fontSize: 24,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w600,
+                            height: 0,
+                            letterSpacing: -0.17,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ChatInput(),
           ),
+
         ],
       ),
     );
