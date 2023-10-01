@@ -1,4 +1,4 @@
-# Travel App🚗
+# Buflify: A Music Chat App🎶💬
 
 📂Imagine a world where music enthusiasts can seamlessly combine their love for music with real-time conversations. In today's digital age, where music is an integral part of our lives, there's a pressing need for an innovative app that not only allows users to chat with friends but also enhances the conversation experience by enabling them to share song lyrics and explore music features collaboratively.
 ![Frame 57](https://github.com/mahesh-bora/opinhacks_project1/assets/101460679/12674bb3-de61-4149-9675-678b2927a468)
