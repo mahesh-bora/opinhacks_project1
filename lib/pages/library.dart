@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'chat.dart';
 class LibraryPage extends StatefulWidget {
   const LibraryPage({Key? key}) : super(key: key);
 
@@ -101,15 +102,24 @@ class _LibraryPageState extends State<LibraryPage> {
                           width: 1.0,
                         ),
                       ),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          radius: 30,
-                          child: Icon(Icons.person),
-                        ),
-                        title: Text(
-                          friendsList[index],
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                      child: InkWell(
+                        onTap: () {
+                          // Navigate to the desired page
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ChatScreen()),  // Replace with the page you want to navigate to
+                          );
+                        },
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            radius: 30,
+                            child: Icon(Icons.person),
+                          ),
+                          title: Text(
+                            friendsList[index],
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                     );
